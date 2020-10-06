@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iskola>
+	<tanár kod="ID-01">
+		<nev>Nagy Marika</nev>
+		<szak>matematika</szak>
+	</tanár>
+	<tanár kod="ID-02">
+		<nev>Kis Péter</nev>
+		<szak>testnevelés</szak>
+	</tanár>
+	<tantargy kod="ID-001" oktato="01">
+		<tnév>Matematika</tnév>
+		<osztály>7/b</osztály>
+	</tantargy>
+	<tantargy kod="ID-002" oktato="02">
+		<tnév>Kosárlabda</tnév>
+		<osztály>5/b</osztály>
+	</tantargy>
+
+</iskola>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dolgozo [
+<!ELEMENT dolgozo (nev|fizetes)*>
+<!ATTLIST dolgozo
+                kod ID #REQUIRED>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT fizetes (#PCDATA)>
+]>
+
+<dolgozo kod="ID-1">
+	<nev>Józsi</nev>
+	<fizetes>600000</fizetes>
+</dolgozo>

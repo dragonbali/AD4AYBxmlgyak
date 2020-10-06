@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nevjegkartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="nevjegykartya.xsd">
+    <nevjegykartya id="01">
+        <nev>Hornyák Balázs</nev>
+        <ceg>
+            <cim>
+                <iranyitoszam>3550</iranyitoszam>
+                <varos>Miskolc</varos>
+                <utca>Nagy út</utca>
+                <hazszam>12</hazszam>
+            </cim>
+            <nev>Á C S kft.</nev>
+            <telefonszám korzet="12">0612358149</telefonszám>
+            <weblap>google.com</weblap>
+        </ceg>
+        <beosztas>főnök</beosztas>
+        <telefonszám  korzet="15">0615348149</telefonszám>
+        <emali>info@acs.hu</emali>
+    </nevjegykartya>
+</nevjegkartyak>
