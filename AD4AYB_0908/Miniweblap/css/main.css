@@ -1,0 +1,68 @@
+body {
+    background-image: url("../img/backround.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: Verdana,Geneva,sans-serif; 
+}
+img.mainpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+table {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+      text-align: center;
+      font-size: 150%;
+}
+td.text{
+    width: 65%;
+    padding-top: 50px;
+}
+td.mainpiccell{
+    padding-bottom: 20px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+.itsme{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding-top: 50px;
+}
+a {
+    color: white;
+  }
+.biggerbold{
+    font-size: 120%;
+    font-weight:bold;
+}
+.pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+.oswidth{
+    width: 50%;
+}
+.dbwidth{
+    width: 60%;
+}
+.swtestwidth{
+    width: 80%;
+}
+

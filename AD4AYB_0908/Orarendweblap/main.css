@@ -1,0 +1,36 @@
+body{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-image: url("backround.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color:#0000cc
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-collapse: collapse;
+}
+td,th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+tr:nth-child(odd){
+    background-color: white;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #0099ff;
+    color: white;
+}
