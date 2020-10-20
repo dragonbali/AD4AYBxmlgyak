@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konferencia>
+	<cím>Megbeszélés</cím>
+	<helyszín>Nagy konferencia terem</helyszín>
+	<előadó>
+		<név>Nagy Béla</név>
+		<adószám>12-123456</adószám>
+		<lakcím>Miskolc 3530 Nagy Lajos u. 5</lakcím>
+	</előadó>
+	<hallgatók>
+		<hallgató>
+			<név>Hornyák Balázs</név>
+			<lakcím>Miskolc 3530 Király u. 14 5/4</lakcím>
+		</hallgató>
+	</hallgatók>
+</konferencia>
