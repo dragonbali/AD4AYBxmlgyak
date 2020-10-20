@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="IS0-8859-2"?> 
 <konyv isbn="0836217462"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="kutyavilag.xsd">>
+    xsi:noNamespaceSchemaLocation="kutyavilag.xsd">
    <cim>Kutyavilág</cim>
    <szerzo>Charles M. Schulz</szerzo>
    <szereplo>
