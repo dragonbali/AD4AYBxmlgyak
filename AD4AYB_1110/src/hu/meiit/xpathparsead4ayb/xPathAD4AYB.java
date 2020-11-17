@@ -1,4 +1,4 @@
-package com.meiit.xml;
+package hu.meiit.xpathparsead4ayb;
 
 import java.io.File;
 
