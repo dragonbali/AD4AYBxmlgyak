@@ -4,7 +4,5 @@
         <filters directoryPatterns="" filePatterns="\Qbeadand%C3%B3.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
         <options/>
     </meta>
-    <projectTree name="beadand%C3%B3.xpr">
-        <folder path="."/>
-    </projectTree>
+    <projectTree name="beadand%C3%B3.xpr"/>
 </project>
