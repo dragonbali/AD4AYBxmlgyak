@@ -20,7 +20,7 @@ public class DOMReadAd4ayb {
          DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
          Document doc = dBuilder.parse(inputFile);
          doc.getDocumentElement().normalize();
-         
+         //lent csináltam egy "menut" ahol egy switch el lehet a "lépkedni"
          menu(doc);
          
       } catch (Exception e) {
@@ -28,8 +28,9 @@ public class DOMReadAd4ayb {
       }
    }
    
+   //kilistazza az osszes autot ami szerepel az XML ben
    private static void ListAuto(Document doc) {
-	   System.out.println("Minden autó:");
+	   System.out.println("\nMinden autó:");
 	   NodeList nList = doc.getElementsByTagName("auto");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
 	      Node nNode = nList.item(temp);
@@ -57,8 +58,9 @@ public class DOMReadAd4ayb {
 	   }
    }
    
+   //kilistazza az osszes gyartot ami szerepel az XML ben
    private static void ListGyarto(Document doc) {
-	   System.out.println("Minden gyártó:");
+	   System.out.println("\nMinden gyártó:");
 	   NodeList nList = doc.getElementsByTagName("gyarto");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
 	      Node nNode = nList.item(temp);
@@ -85,8 +87,10 @@ public class DOMReadAd4ayb {
 	      }
 	   }
    }
+   
+   //kilistazza az osszes karosszeriat ami szerepel az XML ben
    private static void ListKarosszeria(Document doc) {
-	   System.out.println("Minden karosszeria:");
+	   System.out.println("\nMinden karosszeria:");
 	   NodeList nList = doc.getElementsByTagName("karosszeria");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
 	      Node nNode = nList.item(temp);
@@ -113,8 +117,10 @@ public class DOMReadAd4ayb {
 	      }
 	   }
    }
+   
+   //kilistazza az osszes extrat ami szerepel az XML ben
    private static void ListExtrak(Document doc) {
-	   System.out.println("Minden extra:");
+	   System.out.println("\nMinden extra:");
 	   NodeList nList = doc.getElementsByTagName("extra");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
 	      Node nNode = nList.item(temp);
@@ -136,8 +142,10 @@ public class DOMReadAd4ayb {
 	      }
 	   }
    }
+   
+   //kilistazza az osszes mototrt ami szerepel az XML ben
    private static void ListMotor(Document doc) {
-	   System.out.println("Minden motor:");
+	   System.out.println("\nMinden motor:");
 	   NodeList nList = doc.getElementsByTagName("motor");  	   
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
 	      Node nNode = nList.item(temp);
@@ -161,44 +169,65 @@ public class DOMReadAd4ayb {
 	   }
    }
    
-   
+   //ez a main ben hivodik meg, ahol atadom neki a Document-et hogy a switchen belul at tudjam adni az
+   //adott fugvenynek.
    private static void menu(Document doc) {
-	@SuppressWarnings("resource")
-	Scanner scann = new Scanner(System.in);
-	System.out.println("az osszes auto listazasahoz nyomd meg az 1-est!");
-	System.out.println("az osszes gyarto listazasahoz nyomd meg az 2-est!");
-	System.out.println("az osszes karosszéria listazasahoz nyomd meg az 3-ast!");
-	System.out.println("az osszes extrak listazasahoz nyomd meg az 4-est!");
-	System.out.println("az osszes motor listazasahoz nyomd meg az 5-ost!");
-
-	int menu = scann.nextInt();
+		@SuppressWarnings("resource")
+		Scanner scann = new Scanner(System.in);
+		System.out.println("az osszes auto listazasahoz nyomd meg az 1-est!");
+		System.out.println("az osszes gyarto listazasahoz nyomd meg az 2-est!");
+		System.out.println("az osszes karosszéria listazasahoz nyomd meg az 3-ast!");
+		System.out.println("az osszes extrak listazasahoz nyomd meg az 4-est!");
+		System.out.println("az osszes motor listazasahoz nyomd meg az 5-ost!");
+		System.out.println("----------------");
+		System.out.println("kilepeshez nyomja meg a q-t");
 	
-	switch (menu) {
-	case 1: {
-		ListAuto(doc);
-		break;
-	}
-	case 2: {
-		ListGyarto(doc);
-		break;
-	}
-	case 3: {
-		ListKarosszeria(doc);
-		break;
-	}
-	case 4: {
-		ListExtrak(doc);
-		break;
-	}
-	case 5: {
-		ListMotor(doc);
-		break;
-	}
-	default:
-		menu(doc);
-		break;
-	}
-	System.out.println();
-}
+		//string ként olvasom be így ha más stringet írnak be mint ami a menuben választható, 
+		//akkor a default lép érványbe és kiirja, hogy wrong input, majd megivja megint a menut.
+		//Minden menu hivas utan megjelenik menint a menu hogy ujabb lekerdeset csinaljunk,
+		//ha q-t megnyomjunk ki tudunk lepni a programbol
+		
+		String menu = scann.next();
+		
+		switch (menu) {
+		case "1": {
+			ListAuto(doc);
+			System.out.println();
+			menu(doc);
+			break;
+		}
+		case "2": {
+			ListGyarto(doc);
+			System.out.println();
+			menu(doc);
+			break;
+		}
+		case "3": {
+			ListKarosszeria(doc);
+			System.out.println();
+			menu(doc);
+			break;
+		}
+		case "4": {
+			ListExtrak(doc);
+			System.out.println();
+			menu(doc);
+			break;
+		}
+		case "5": {
+			ListMotor(doc);
+			System.out.println();
+			menu(doc);
+			break;
+		}
+		case "q": {
+			break;
+		}
+		default:
+			System.out.println("Wrong input!");
+			menu(doc);
+			break;
+		}
+   }
 
 }
