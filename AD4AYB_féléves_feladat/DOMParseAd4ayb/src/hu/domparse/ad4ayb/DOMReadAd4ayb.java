@@ -29,7 +29,7 @@ public class DOMReadAd4ayb {
    }
    
    //kilistazza az osszes autot ami szerepel az XML ben
-   private static void ListAuto(Document doc) {
+   public static void ListAuto(Document doc) {
 	   System.out.println("\nMinden autó:");
 	   NodeList nList = doc.getElementsByTagName("auto");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -53,13 +53,14 @@ public class DOMReadAd4ayb {
 	            + eElement
 	            .getElementsByTagName("ar")
 	            .item(0)
-	            .getTextContent());
+	            .getTextContent()
+	            + "Ft" );
 	      }
 	   }
    }
    
    //kilistazza az osszes gyartot ami szerepel az XML ben
-   private static void ListGyarto(Document doc) {
+   public static void ListGyarto(Document doc) {
 	   System.out.println("\nMinden gyártó:");
 	   NodeList nList = doc.getElementsByTagName("gyarto");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -89,7 +90,7 @@ public class DOMReadAd4ayb {
    }
    
    //kilistazza az osszes karosszeriat ami szerepel az XML ben
-   private static void ListKarosszeria(Document doc) {
+   public static void ListKarosszeria(Document doc) {
 	   System.out.println("\nMinden karosszeria:");
 	   NodeList nList = doc.getElementsByTagName("karosszeria");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -119,7 +120,7 @@ public class DOMReadAd4ayb {
    }
    
    //kilistazza az osszes extrat ami szerepel az XML ben
-   private static void ListExtrak(Document doc) {
+   public static void ListExtrak(Document doc) {
 	   System.out.println("\nMinden extra:");
 	   NodeList nList = doc.getElementsByTagName("extra");       
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -144,7 +145,7 @@ public class DOMReadAd4ayb {
    }
    
    //kilistazza az osszes mototrt ami szerepel az XML ben
-   private static void ListMotor(Document doc) {
+   public static void ListMotor(Document doc) {
 	   System.out.println("\nMinden motor:");
 	   NodeList nList = doc.getElementsByTagName("motor");  	   
 	   for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -174,14 +175,7 @@ public class DOMReadAd4ayb {
    private static void menu(Document doc) {
 		@SuppressWarnings("resource")
 		Scanner scann = new Scanner(System.in);
-		System.out.println("az osszes auto listazasahoz nyomd meg az 1-est!");
-		System.out.println("az osszes gyarto listazasahoz nyomd meg az 2-est!");
-		System.out.println("az osszes karosszéria listazasahoz nyomd meg az 3-ast!");
-		System.out.println("az osszes extrak listazasahoz nyomd meg az 4-est!");
-		System.out.println("az osszes motor listazasahoz nyomd meg az 5-ost!");
-		System.out.println("----------------");
-		System.out.println("kilepeshez nyomja meg a q-t");
-	
+		menuText();	
 		//string ként olvasom be így ha más stringet írnak be mint ami a menuben választható, 
 		//akkor a default lép érványbe és kiirja, hogy wrong input, majd megivja megint a menut.
 		//Minden menu hivas utan megjelenik menint a menu hogy ujabb lekerdeset csinaljunk,
@@ -230,4 +224,15 @@ public class DOMReadAd4ayb {
 		}
    }
 
+   //ahhoz hogy ne kelljen megint leirni a modifyban.
+	public static void menuText() {
+		System.out.println("az osszes auto listazasahoz nyomd meg az 1-est!");
+		System.out.println("az osszes gyarto listazasahoz nyomd meg az 2-est!");
+		System.out.println("az osszes karosszéria listazasahoz nyomd meg az 3-ast!");
+		System.out.println("az osszes extrak listazasahoz nyomd meg az 4-est!");
+		System.out.println("az osszes motor listazasahoz nyomd meg az 5-ost!");
+		System.out.println("----------------");
+		System.out.println("kilepeshez nyomja meg a q-t");
+		
+	}
 }

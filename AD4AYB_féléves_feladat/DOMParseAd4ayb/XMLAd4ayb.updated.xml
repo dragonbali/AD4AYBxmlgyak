@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><nyilvantartas xmlns="nyilvantartas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="nyilvantartas XMLSchemaAd4ayb.xsd">
+    <auto extraid="001 002 004" gyartoid="101" karosszeriaid="au1" motorid="a01" rsz="ABC123">
+        <ev>2017</ev>
+        <tipus>A6</tipus>
+        <ar>12000000</ar>
+    </auto>
+    <auto extraid="001 002 003 004" gyartoid="101" karosszeriaid="au2" motorid="a02" rsz="ABC345">
+        <ev>2018</ev>
+        <tipus>A8</tipus>
+        <ar>21000000</ar>
+    </auto>
+    <auto extraid="001" gyartoid="101" karosszeriaid="au3" motorid="a01" rsz="XYZ345">
+        <ev>2010</ev>
+        <tipus>Q3</tipus>
+        <ar>6000000</ar>
+    </auto>
+    <auto gyartoid="102" karosszeriaid="op1" motorid="o01" rsz="KLE345">
+        <ev>2017</ev>
+        <tipus>Astra</tipus>
+        <ar>4500000</ar>
+    </auto>
+    <auto extraid="001 003" gyartoid="102" karosszeriaid="op1" motorid="o01" rsz="KLG111">
+        <ev>2018</ev>
+        <tipus>Astra</tipus>
+        <ar>5500000</ar>
+    </auto>
+    <auto extraid="001" gyartoid="103" karosszeriaid="sk1" motorid="s01" rsz="SSS045">
+        <ev>2019</ev>
+        <tipus>Octavia</tipus>
+        <ar>7500000</ar>
+    </auto>
+    <auto extraid="001 002 003" gyartoid="103" karosszeriaid="sk2" motorid="s02" rsz="SZX085">
+        <ev>2020</ev>
+        <tipus>Superb</tipus>
+        <ar>11500000</ar>
+    </auto>
+    <motor id="a01">
+        <uzemanyag>diesel</uzemanyag>
+        <cc>3000</cc>
+    </motor>
+    <motor id="a02">
+        <uzemanyag>benzin</uzemanyag>
+        <cc>4500</cc>
+    </motor>
+    <motor id="o01">
+        <uzemanyag>benzin</uzemanyag>
+        <cc>2000</cc>
+    </motor>
+    <motor id="s01">
+        <uzemanyag>benzin</uzemanyag>
+        <cc>1600</cc>
+    </motor>
+    <motor id="s02">
+        <uzemanyag>diesel</uzemanyag>
+        <cc>2000</cc>
+    </motor>
+    <karosszeria id="au1">
+        <kivitel>kombi</kivitel>
+        <szin>fekete</szin>
+        <ajtok_szama>5</ajtok_szama>
+    </karosszeria>
+    <karosszeria id="au2">
+        <kivitel>sedan</kivitel>
+        <szin>feher</szin>
+        <ajtok_szama>4</ajtok_szama>
+    </karosszeria>
+    <karosszeria id="au3">
+        <kivitel>suv</kivitel>
+        <szin>fekete</szin>
+        <ajtok_szama>5</ajtok_szama>
+    </karosszeria>
+    <karosszeria id="op1">
+        <kivitel>hatchback</kivitel>
+        <szin>szurke</szin>
+        <ajtok_szama>5</ajtok_szama>
+    </karosszeria>
+    <karosszeria id="sk1">
+        <kivitel>kombi</kivitel>
+        <szin>kek</szin>
+        <ajtok_szama>5</ajtok_szama>
+    </karosszeria>
+    <karosszeria id="sk2">
+        <kivitel>sedan</kivitel>
+        <szin>zold</szin>
+        <ajtok_szama>4</ajtok_szama>
+    </karosszeria>
+    <extra id="001">
+        <nev>ablak sotetites</nev>
+        <hely>kulso</hely>
+    </extra>   
+    <extra id="002">
+        <nev>sávtartó</nev>
+        <hely>kulso</hely>
+    </extra> 
+    <extra id="003">
+        <nev>ules futes</nev>
+        <hely>belso</hely>
+    </extra> 
+    <extra id="004">
+        <nev>bor ules</nev>
+        <hely>belso</hely>
+    </extra> 
+    <gyarto id="101">
+        <nev>Audi</nev>
+        <cim>
+            <orszag>Nemetorszag</orszag>
+            <varos>Ingolstadt</varos>
+        </cim>
+    </gyarto>
+    <gyarto id="102">
+        <nev>Opel</nev>
+        <cim>
+            <orszag>Nemetorszag</orszag>
+            <varos>Rüsselsheim</varos>
+        </cim>
+    </gyarto>
+    <gyarto id="103">
+        <nev>Skoda</nev>
+        <cim>
+            <orszag>Csehország</orszag>
+            <varos>Mladá Boleslav</varos>
+        </cim>
+    </gyarto>
+</nyilvantartas>
