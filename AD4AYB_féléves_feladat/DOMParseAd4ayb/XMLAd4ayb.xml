@@ -4,37 +4,37 @@
     <auto rsz="ABC123" motorid="a01" extraid="001 002 004" karosszeriaid="au1" gyartoid="101">
         <ev>2016</ev>
         <tipus>A6</tipus>
-        <ár>12000000</ár>
+        <ar>12000000</ar>
     </auto>
     <auto rsz="ABC345" motorid="a02" extraid="001 002 003 004" karosszeriaid="au2" gyartoid="101">
         <ev>2018</ev>
         <tipus>A8</tipus>
-        <ár>21000000</ár>
+        <ar>21000000</ar>
     </auto>
     <auto rsz="XYZ345" motorid="a01" extraid="001" karosszeriaid="au3" gyartoid="101">
         <ev>2010</ev>
         <tipus>Q3</tipus>
-        <ár>6000000</ár>
+        <ar>6000000</ar>
     </auto>
     <auto rsz="KLE345" motorid="o01" karosszeriaid="op1" gyartoid="102">
         <ev>2017</ev>
         <tipus>Astra</tipus>
-        <ár>4500000</ár>
+        <ar>4500000</ar>
     </auto>
     <auto rsz="KLG111" motorid="o01" extraid="001 003" karosszeriaid="op1" gyartoid="102">
         <ev>2018</ev>
         <tipus>Astra</tipus>
-        <ár>5500000</ár>
+        <ar>5500000</ar>
     </auto>
     <auto rsz="SSS045" motorid="s01" extraid="001" karosszeriaid="sk1" gyartoid="103">
         <ev>2019</ev>
         <tipus>Octavia</tipus>
-        <ár>7500000</ár>
+        <ar>7500000</ar>
     </auto>
     <auto rsz="SZX085" motorid="s02" extraid="001 002 003" karosszeriaid="sk2" gyartoid="103">
         <ev>2020</ev>
         <tipus>Superb</tipus>
-        <ár>11500000</ár>
+        <ar>11500000</ar>
     </auto>
     <motor id="a01">
         <uzemanyag>diesel</uzemanyag>
