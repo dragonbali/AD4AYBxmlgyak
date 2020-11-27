@@ -76,20 +76,44 @@ public class DOMModifyAd4ayb2 {
 			break;
 		}
 		case "3": {
+			//a readben levo kiiratast hasznalom
 			DOMReadAd4ayb.ListKarosszeria(doc);
-			System.out.println();
+			//bekerem a valtoztatashoz szukseges adatokat
+			String id = valasztas();
+			String element = valasztas2();
+			String newElement = valasztas3();
+			//atadom a bekert adatokat
+			ModifyKarosszeria(id, element, newElement, doc);
+			System.out.println("megtortent a modositas");
+			//ismet meghivodik a menu
 			menu(doc);
 			break;
 		}
 		case "4": {
+			//a readben levo kiiratast hasznalom
 			DOMReadAd4ayb.ListExtrak(doc);
-			System.out.println();
+			//bekerem a valtoztatashoz szukseges adatokat
+			String id = valasztas();
+			String element = valasztas2();
+			String newElement = valasztas3();
+			//atadom a bekert adatokat
+			ModifyExtrak(id, element, newElement, doc);
+			System.out.println("megtortent a modositas");
+			//ismet meghivodik a menu
 			menu(doc);
 			break;
 		}
 		case "5": {
+			//a readben levo kiiratast hasznalom
 			DOMReadAd4ayb.ListMotor(doc);
-			System.out.println();
+			//bekerem a valtoztatashoz szukseges adatokat
+			String id = valasztas();
+			String element = valasztas2();
+			String newElement = valasztas3();
+			//atadom a bekert adatokat
+			ModifyMotor(id, element, newElement, doc);
+			System.out.println("megtortent a modositas");
+			//ismet meghivodik a menu
 			menu(doc);
 			break;
 		}
@@ -104,11 +128,69 @@ public class DOMModifyAd4ayb2 {
 		
 	}
 
-	private static void ModifyGyarto(String id, String element, String newElement, Document doc) {
-		// TODO Auto-generated method stub
+	//motor adat módosítás
+	private static void ModifyMotor(String id, String element, String newElement, Document doc) throws TransformerException {
+		NodeList nList = doc.getElementsByTagName("motor");   
+		   for (int temp = 0; temp < nList.getLength(); temp++) {
+		      Node nNode = nList.item(temp);
+		      if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+		         Element eElement = (Element) nNode;
+		           if (eElement.getAttribute("id").equals(id)) {
+		        	   eElement.getElementsByTagName(element).item(0).setTextContent(newElement);
+				} 
+		     }
+		   }
+		   CreateXML(doc);	
 		
 	}
 
+	//extrák adat módosítás
+	private static void ModifyExtrak(String id, String element, String newElement, Document doc) throws TransformerException {
+		NodeList nList = doc.getElementsByTagName("extra");   
+		   for (int temp = 0; temp < nList.getLength(); temp++) {
+		      Node nNode = nList.item(temp);
+		      if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+		         Element eElement = (Element) nNode;
+		           if (eElement.getAttribute("id").equals(id)) {
+		        	   eElement.getElementsByTagName(element).item(0).setTextContent(newElement);
+				} 
+		     }
+		   }
+		   CreateXML(doc);		
+	}
+
+	//karosszeria adat módosítás
+	private static void ModifyKarosszeria(String id, String element, String newElement, Document doc) throws TransformerException {
+		NodeList nList = doc.getElementsByTagName("karosszeria");   
+		   for (int temp = 0; temp < nList.getLength(); temp++) {
+		      Node nNode = nList.item(temp);
+		      if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+		         Element eElement = (Element) nNode;
+		           if (eElement.getAttribute("id").equals(id)) {
+		        	   eElement.getElementsByTagName(element).item(0).setTextContent(newElement);
+				} 
+		     }
+		   }
+		   CreateXML(doc);	
+		
+	}
+
+	//gyarto adat módosítás
+	private static void ModifyGyarto(String id, String element, String newElement, Document doc) throws TransformerException {
+		NodeList nList = doc.getElementsByTagName("gyarto");   
+		   for (int temp = 0; temp < nList.getLength(); temp++) {
+		      Node nNode = nList.item(temp);
+		      if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+		         Element eElement = (Element) nNode;
+		           if (eElement.getAttribute("id").equals(id)) {
+		        	   eElement.getElementsByTagName(element).item(0).setTextContent(newElement);
+				} 
+		     }
+		   }
+		   CreateXML(doc);	
+	}
+
+	//auto adat módosítás
 	private static void ModifyAuto(String id, String element, String newElement, Document doc) throws TransformerException {
 		 NodeList nList = doc.getElementsByTagName("auto");   
 		   for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -132,6 +214,7 @@ public class DOMModifyAd4ayb2 {
         transformer.transform(source, result);
 	}
 
+	//bekérés
 	private static String valasztas() {
 		System.out.println("irja az id-t ahol modositani szeretne!");
 		@SuppressWarnings("resource")
@@ -140,6 +223,8 @@ public class DOMModifyAd4ayb2 {
 		return menu;
 		
 	}
+	
+	//bekérés
 	private static String valasztas2() {
 		System.out.println("addja meg azt az adattagot, amit modositani szeretne!");
 		@SuppressWarnings("resource")
@@ -149,6 +234,7 @@ public class DOMModifyAd4ayb2 {
 		
 	}
 	
+	//bekérés
 	private static String valasztas3() {
 		System.out.println("addja meg, hogy mire modositana!");
 		@SuppressWarnings("resource")

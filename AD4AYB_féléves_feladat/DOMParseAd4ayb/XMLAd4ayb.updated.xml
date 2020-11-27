@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><nyilvantartas xmlns="nyilvantartas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="nyilvantartas XMLSchemaAd4ayb.xsd">
     <auto extraid="001 002 004" gyartoid="101" karosszeriaid="au1" motorid="a01" rsz="ABC123">
-        <ev>2017</ev>
+        <ev>2016</ev>
         <tipus>A6</tipus>
         <ar>12000000</ar>
     </auto>
@@ -35,7 +35,7 @@
         <ar>11500000</ar>
     </auto>
     <motor id="a01">
-        <uzemanyag>diesel</uzemanyag>
+        <uzemanyag>benzin</uzemanyag>
         <cc>3000</cc>
     </motor>
     <motor id="a02">
