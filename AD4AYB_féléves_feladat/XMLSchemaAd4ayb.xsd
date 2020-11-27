@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="nyilvantartas" xmlns:ns1="nyilvantartas">
+  <xs:element name="nyilvantartas">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ns1:auto"/>
+        <xs:element ref="ns1:extra"/>
+        <xs:element ref="ns1:gyarto"/>
+        <xs:element ref="ns1:karosszeria"/>
+        <xs:element ref="ns1:motor"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="auto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:ev"/>
+        <xs:element ref="ns1:tipus"/>
+        <xs:element ref="ns1:ár"/>
+      </xs:sequence>
+      <xs:attribute name="extraid"/>
+      <xs:attribute name="gyartoid" use="required" type="xs:integer"/>
+      <xs:attribute name="karosszeriaid" use="required" type="xs:NCName"/>
+      <xs:attribute name="motorid" use="required" type="xs:NCName"/>
+      <xs:attribute name="rsz" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ev" type="xs:integer"/>
+  <xs:element name="tipus" type="xs:NCName"/>
+  <xs:element name="ár" type="xs:integer"/>
+  <xs:element name="extra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:nev"/>
+        <xs:element ref="ns1:hely"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hely" type="xs:NCName"/>
+  <xs:element name="gyarto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:nev"/>
+        <xs:element ref="ns1:cim"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:orszag"/>
+        <xs:element ref="ns1:varos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="orszag" type="xs:NCName"/>
+  <xs:element name="varos" type="xs:string"/>
+  <xs:element name="karosszeria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:kivitel"/>
+        <xs:element ref="ns1:szin"/>
+        <xs:element ref="ns1:ajtok_szama"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="kivitel" type="xs:NCName"/>
+  <xs:element name="szin" type="xs:NCName"/>
+  <xs:element name="ajtok_szama" type="xs:integer"/>
+  <xs:element name="motor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:uzemanyag"/>
+        <xs:element ref="ns1:cc"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uzemanyag" type="xs:NCName"/>
+  <xs:element name="cc" type="xs:integer"/>
+  <xs:element name="nev" type="xs:string"/>
+</xs:schema>
