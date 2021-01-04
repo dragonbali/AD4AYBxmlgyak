@@ -35,7 +35,7 @@
         <ar>11500000</ar>
     </auto>
     <motor id="a01">
-        <uzemanyag>benzin</uzemanyag>
+        <uzemanyag>diesel</uzemanyag>
         <cc>3000</cc>
     </motor>
     <motor id="a02">
@@ -115,7 +115,7 @@
         </cim>
     </gyarto>
     <gyarto id="103">
-        <nev>Skoda</nev>
+        <nev>Skoda2</nev>
         <cim>
             <orszag>Csehország</orszag>
             <varos>Mladá Boleslav</varos>
